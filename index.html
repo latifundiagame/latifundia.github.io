@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Latifundia — Uma aldeia no Alentejo</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div><span class="eyebrow">UMA ALDEIA NO ALENTEJO</span><h1><img class="game-logo" src="assets/logo.png" alt="Latifundia"></h1></div><button id="new-game" class="quiet">Nova aldeia</button></header>
+<main>
+<section class="dashboard" aria-label="Recursos"><div><small>ESTAÇÃO</small><strong id="season"></strong></div><div><small>TESOURO</small><strong id="coins"></strong></div><div><small>CELEIRO</small><strong id="food"></strong></div><div><small>HABITANTES</small><strong id="population"></strong></div></section>
+<div class="layout"><aside>
+<section class="goal"><span class="eyebrow">PRIMEIRO MARCO</span><h2>Faça nascer uma vila.</h2><p>Reúna <b>24 habitantes</b>, uma <b>igreja</b> e <b>20 alimentos</b> e ligue a igreja à praça. Depois, continue a expandir.</p><progress id="progress" max="3" value="0"></progress><small id="goal-status"></small></section>
+<div class="build-heading"><h2>Construir</h2><small>Escolha e toque no terreno</small></div>
+<div id="tools" role="group" aria-label="Construções"></div>
+<p class="hint" id="tool-hint"></p>
+</aside>
+<section class="map-panel" aria-label="Mapa da aldeia"><div class="map-label"><span>LATIFUNDIA · V3 · ATIVOS ORIGINAIS</span><small id="save-status">Jogo local · sem ligação necessária</small></div><p id="asset-status" role="status">A carregar os 4 ativos originais…</p><canvas id="map" tabindex="0" aria-label="Mapa isométrico. Use as setas para escolher terreno e Enter para construir."></canvas><div class="map-footer"><span>Praça dourada · origem das estradas</span><span>Setas + Enter ou toque</span></div></section></div>
+<section class="turn-panel"><div><strong id="forecast"></strong><p id="info" role="status" aria-live="polite"></p></div><button id="next-turn" class="primary">Próxima estação <span>→</span></button></section>
+<details><summary>Como jogar</summary><p>Expanda a aldeia sem limite de tempo. Escolha uma construção e clique no mapa. Use estradas para ligar os edifícios à praça dourada inicial: só as estradas ligadas pelos lados contam. Os pontos vermelhos assinalam edifícios desligados.</p><p>Cada casa alberga 4 habitantes. Chegam até 2 pessoas por estação se houver comida e casas com estrada e mercado a até 4 terrenos de distância na grelha. Casas sem estes serviços perdem até 2 habitantes por estação. Mercados, searas, moinhos e a igreja também precisam de estrada ligada à praça.</p><p>Cada seara ligada produz 8 alimentos. A população consome 1 alimento por cada 2 habitantes; sem comida, partem até 2 pessoas. Os impostos rendem 1 moeda por habitante e cada moinho ligado rende mais 8. Construa antes de avançar a estação. Demolir devolve metade do custo. Se ficar sem recursos, pode demolir e reorganizar a aldeia ou começar de novo.</p><p>O primeiro marco é chegar a 24 habitantes com uma igreja ligada e 20 alimentos. Pode continuar depois disso. O progresso é guardado neste navegador quando disponível. Esta primeira versão usa estações manuais e distribuição simplificada por proximidade.</p></details>
+</main>
+<dialog id="result"><span class="eyebrow">LATIFUNDIA</span><h2 id="result-title"></h2><p id="result-text"></p><button id="restart" class="primary">Começar de novo</button><button id="inspect">Ver aldeia</button></dialog>
+<dialog id="confirm-new"><h2>Começar uma nova aldeia?</h2><p>O progresso atual será substituído.</p><button id="confirm-restart" class="primary">Nova aldeia</button><button id="cancel-restart">Continuar esta aldeia</button></dialog>
+<script src="main.js"></script>
+</body></html>
