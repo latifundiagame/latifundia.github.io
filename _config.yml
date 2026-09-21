@@ -1,0 +1,18 @@
+title: Latifundia
+description: >-
+  A city-building and management game inspired by Caesar III,
+  set in Portugal's Alentejo region.
+lang: pt-PT
+encoding: UTF-8
+
+theme: null
+
+exclude:
+  - README.md
+  - README.txt
+  - LICENSE
+  - "*.zip"
+  - Latifundia.html
+  - Latifundia-v3-ativos.html
+  - node_modules
+  - vendor
